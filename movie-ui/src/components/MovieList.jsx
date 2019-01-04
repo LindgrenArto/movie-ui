@@ -37,7 +37,6 @@ class MovieList extends Component {
                 <img src={movies.poster_src} width="120" alt="poster" />
               </td>
               <td>{movie.title}</td>
-              <p>{movie.overview}</p>
             </tr>
           </tbody>
         </table>
@@ -45,7 +44,7 @@ class MovieList extends Component {
       movieRows.push(movieRow);
     });
 
-    this.state = { row: movieRows };
+    this.setState = { row: movieRows };
   }
 
   performSearch() {
@@ -60,6 +59,12 @@ class MovieList extends Component {
         console.log(searchResults);
         const results = searchResults.results;
         console.log(results[0]);
+
+        results.forEach(movie => {
+          movie.poster_src =
+            "https://image.tmdb.org/t/p/w185" + movie.poster_path;
+          console.log(movie.title);
+        });
       },
       error: (xhr, status, err) => {
         console.log(" haku ei toimi");
