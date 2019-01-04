@@ -9,8 +9,8 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavBar />
-        <MovieList></MovieList>
-        <main className="container" />
+        <main className="container" >
+        <MovieList></MovieList></main>
       </React.Fragment>
       
     );
