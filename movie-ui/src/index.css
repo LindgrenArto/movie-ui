@@ -21,3 +21,12 @@ code {
   color: lightgray;
   margin: 0 auto;
 }
+
+.movie-input {
+  width: 100%;
+  height: 40px;
+  font-size: 28px;
+  display: block;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}

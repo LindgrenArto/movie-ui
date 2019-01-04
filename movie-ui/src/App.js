@@ -2,17 +2,17 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/navbar";
-import MovieList from "./components/movie-list";
+import MovieList from "./components/MovieList";
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
         <NavBar />
-        <main className="container" >
-        <MovieList></MovieList></main>
+        <main className="container">
+          <MovieList />
+        </main>
       </React.Fragment>
-      
     );
   }
 }
