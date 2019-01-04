@@ -45,13 +45,13 @@ class MovieList extends Component {
       movieRows.push(movieRow);
     });
 
-    this.state = { row: movieRows };
+    this.setstate = { row: movieRows };
   }
 
-  performSearch() {
+  performSearch(searchTerm) {
     console.log("Search applied");
     const urlString =
-      "https://api.themoviedb.org/3/search/movie?query=marvel&api_key=068d49b266bf94644819ae580f3ec131";
+      "https://api.themoviedb.org/3/search/movie?api_key=068d49b266bf94644819ae580f3ec131&query=" + searchTerm;
 
     $.ajax({
       url: urlString,
@@ -66,10 +66,18 @@ class MovieList extends Component {
       }
     });
   }
+
+  searchChangeHandler(event) {
+    console.log(event.target.value)
+    const boundObject = this
+    const searchTerm = event.target.value
+    boundObject.performSearch(searchTerm)
+  }
+
   render() {
     return (
       <React.Fragment>
-        <input type="text" placeholder="Search" className="movie-input" />
+        <input type="text" placeholder="Search" className="movie-input" onChange= {this.searchChangeHandler.bind(this)} />
 
         {this.state.row}
       </React.Fragment>
