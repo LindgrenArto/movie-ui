@@ -17,9 +17,20 @@ code {
   text-align: center;
 }
 
-.navbar h1 {
+.navbar div {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar span {
+  vertical-align: middle;
+  font-size: 24px;
   color: lightgray;
-  margin: 0 auto;
+}
+
+.navbar img {
+  width: 60px;
+  height: 60px;
 }
 
 .movie-input {
