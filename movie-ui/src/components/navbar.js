@@ -4,7 +4,10 @@ class NavBar extends Component {
   render() {
     return (
       <nav className="navbar navbar-dark bg-dark">
-        <h1>Movie Database</h1>
+        <div>
+          <img src={require("../img/movie-ui.png")}/>
+          <span>Movie Database</span>
+        </div>
       </nav>
     );
   }
