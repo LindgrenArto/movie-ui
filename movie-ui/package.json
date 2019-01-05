@@ -9,7 +9,8 @@
     "react-dom": "^16.7.0",
     "react-navbar": "^3.0.0",
     "react-scripts": "2.1.2",
-    "react-scroll-up-button": "^1.6.4"
+    "react-scroll-up-button": "^1.6.4",
+    "reactstrap": "^7.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
