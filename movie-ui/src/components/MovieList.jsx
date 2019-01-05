@@ -13,14 +13,12 @@ class MovieList extends Component {
   }
 
   performSearch(searchTerm) {
-    console.log("Perform search using moviedb");
     const urlString =
       "https://api.themoviedb.org/3/search/movie?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=" +
       searchTerm;
     $.ajax({
       url: urlString,
       success: searchResults => {
-        console.log(searchResults);
         const results = searchResults.results;
 
         var movieRows = [];
@@ -36,7 +34,7 @@ class MovieList extends Component {
         this.setState({ rows: movieRows });
       },
       error: (xhr, status, err) => {
-        console.error("Failed to fetch data");
+        this.performSearch("die");
       }
     });
   }
