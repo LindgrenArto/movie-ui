@@ -18,7 +18,7 @@ class MovieRow extends React.Component {
         <div className="col-sm-4" style={{ float: "left" }}>
           <div
             className="card mb-4 shadow-sm"
-            style={{ height: 1100, width: 350, margin: 20 }}
+            style={{ height: 1400, width: 350, margin: 20 }}
           >
             <img alt="poster" width="100%" src={this.props.movie.poster_src} />
             <h3>{this.props.movie.title}</h3>
