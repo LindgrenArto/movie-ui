@@ -1,6 +1,12 @@
 import React from "react";
 
 class MovieRow extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.viewMovie = this.viewMovie.bind(this);
+  }
+
   viewMovie() {
     const url = "https://www.themoviedb.org/movie/" + this.props.movie.id;
     window.location.href = url;
@@ -8,6 +14,40 @@ class MovieRow extends React.Component {
 
   render() {
     return (
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4">
+            <div className="card mb-4 shadow-sm">
+              <img alt="poster" width="330" src={this.props.movie.poster_src} />
+              <h3>{this.props.movie.title}</h3>
+              <div className="card-body">
+                <p style={{ fontSize: 20 }} className="card-text">
+                  {this.props.movie.overview}.
+                </p>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div className="btn-group">
+                    <button
+                      type="button"
+                      onClick={this.viewMovie}
+                      value="View"
+                      className="button"
+                    >
+                      View
+                    </button>
+                    <b style={{ marginLeft: 150, fontSize: 25, marginTop: 15 }}>
+                      {this.props.movie.vote_average}/10
+                    </b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+/*</div>
       <table key={this.props.movie.id} className="table">
         <tbody>
           <tr>
@@ -33,5 +73,6 @@ class MovieRow extends React.Component {
     );
   }
 }
+*/
 
 export default MovieRow;
