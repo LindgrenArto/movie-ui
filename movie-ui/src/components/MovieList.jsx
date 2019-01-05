@@ -9,7 +9,7 @@ class MovieList extends Component {
     };
     this.performSearch = this.performSearch.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
-    this.performSearch("die");
+    this.performSearch("A");
   }
 
   performSearch(searchTerm) {
