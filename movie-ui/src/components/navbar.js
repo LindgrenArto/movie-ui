@@ -33,10 +33,10 @@ class NavBar extends Component {
         
 
         <nav className="navbar navbar-dark bg-dark">
-        <div>
+        
           <img src={require("../img/movie-ui.png")} alt="logo" />
-          <span>Movie Database</span>
-        </div>
+          <span>Movie Database App</span>
+        
 
       
         <Navbar>
