@@ -11,7 +11,7 @@ class App extends Component {
         <NavBar />
         <main className="container">
           <MovieList />
-          <Index />
+          <Index/>
         </main>
       </React.Fragment>
     );
