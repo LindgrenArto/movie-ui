@@ -20,7 +20,7 @@ class MovieRow extends React.Component {
             className="card mb-4 shadow-sm"
             style={{ height: 1400, width: 350, margin: 20 }}
           >
-            <img alt="poster" width="100%" src={this.props.movie.poster_src} />
+            <img alt="poster" width="100%" src={this.props.movie.poster_src} onClick={this.viewMovie} />
             <h3>{this.props.movie.title}</h3>
             <div className="card-body">
               <p style={{ fontSize: 20 }} className="card-text">
@@ -50,7 +50,9 @@ class MovieRow extends React.Component {
                       marginTop: 10
                     }}
                   >
+                
                     {this.props.movie.vote_average}/10
+                    
                   </b>
                 </div>
               </div>

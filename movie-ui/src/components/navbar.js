@@ -25,42 +25,35 @@ class NavBar extends Component {
 
   toggleNavbar() {
     this.setState({collapsed: !this.state.collapsed})
+    
   };
 
   render() {
     return (
-      <div>
-        
-
-        <nav className="navbar navbar-dark bg-dark">
-        
-          <img src={require("../img/movie-ui.png")} alt="logo" />
-          <span>Movie Database App</span>
+     
         
 
       
-        <Navbar>
-          <NavbarToggler onClick={this.toggleNavbar}/>
+     
+      <div>
+        <Navbar className="navbar navbar-dark bg-dark">
+          <NavbarToggler onClick={this.toggleNavbar} className="navbar navbar-dark bg-dark" />
+          <span>Movie Database App</span>
+          <img src={require("../img/movie-ui.png")} alt="logo" />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href="https://developers.themoviedb.org/3/search/search-movies">Movie Api</NavLink>
+                <NavLink href="https://developers.themoviedb.org/3/search/search-movies">The Movie Database API</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/lindgrenarto/movie-ui">GitHub</NavLink>
+                <NavLink href="https://github.com/lindgrenarto/movie-ui"> App in GitHub</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
-
-  
-      </nav>
-
-
-
-      
-        
       </div>
+    
+    
     );
   }
 }
