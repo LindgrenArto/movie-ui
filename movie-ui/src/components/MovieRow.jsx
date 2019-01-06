@@ -16,25 +16,13 @@ class MovieRow extends React.Component {
     return (
       <div className="container">
         <div className="col-sm-4" style={{ float: "left" }}>
-          <div
-            className="card mb-4 shadow-sm"
-            style={{ height: 1400, width: 350, margin: 20 }}
-          >
+          <div className="card mb-4 shadow-sm">
             <img alt="poster" width="100%" src={this.props.movie.poster_src} />
             <h3>{this.props.movie.title}</h3>
             <div className="card-body">
-              <p style={{ fontSize: 20 }} className="card-text">
-                {this.props.movie.overview}.
-              </p>
+              <p className="card-text">{this.props.movie.overview}.</p>
               <div className="d-flex justify-content-between align-items-center">
-                <div
-                  className="btn-group"
-                  style={{
-                    bottom: 20,
-                    position: "absolute",
-                    verticalAlign: "middle"
-                  }}
-                >
+                <div className="btn-group">
                   <button
                     type="button"
                     onClick={this.viewMovie}
@@ -43,15 +31,7 @@ class MovieRow extends React.Component {
                   >
                     View
                   </button>
-                  <b
-                    style={{
-                      marginLeft: 100,
-                      fontSize: 25,
-                      marginTop: 10
-                    }}
-                  >
-                    {this.props.movie.vote_average}/10
-                  </b>
+                  <b>{this.props.movie.vote_average}/10</b>
                 </div>
               </div>
             </div>
