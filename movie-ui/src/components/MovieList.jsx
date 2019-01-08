@@ -45,6 +45,7 @@ class MovieList extends Component {
 
     this.performSearch(search);
   }
+
   render() {
     return (
       <React.Fragment>
