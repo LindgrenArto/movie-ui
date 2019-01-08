@@ -55,3 +55,25 @@ code {
 .table td {
   margin: 10px;
 }
+
+.card {
+  height: 1400px;
+  width: 350px;
+  margin: 20px;
+}
+
+.card-text {
+  font-size: 20px;
+}
+
+div .btn-group {
+  bottom: 20px;
+  position: absolute;
+  vertical-align: middle;
+}
+
+b {
+  margin-left: 100px;
+  font-size: 25px;
+  margin-top: 10px;
+}
