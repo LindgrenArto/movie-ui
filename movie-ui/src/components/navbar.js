@@ -35,8 +35,10 @@ class NavBar extends Component {
             onClick={this.toggleNavbar}
             className="navbar navbar-dark bg-dark"
           />
-          <span>Movie Database App</span>
+          <div>
           <img src={require("../img/movie-ui.png")} alt="logo" />
+          <span>Movie Database</span>
+          </div>
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
