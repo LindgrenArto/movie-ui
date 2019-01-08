@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import NavDropdown from 'react-navbar/dist/Dropdown';
-import MenuItems from "react-navbar/dist/MenuItems";
+
 import {
   Collapse,
   Navbar,
@@ -12,7 +11,8 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  DropdownItem
+} from "reactstrap";
 
 class NavBar extends Component {
   constructor(props) {
@@ -24,36 +24,36 @@ class NavBar extends Component {
   }
 
   toggleNavbar() {
-    this.setState({collapsed: !this.state.collapsed})
-    
-  };
+    this.setState({ collapsed: !this.state.collapsed });
+  }
 
   render() {
     return (
-     
-        
-
-      
-     
       <div>
         <Navbar className="navbar navbar-dark bg-dark">
-          <NavbarToggler onClick={this.toggleNavbar} className="navbar navbar-dark bg-dark" />
+          <NavbarToggler
+            onClick={this.toggleNavbar}
+            className="navbar navbar-dark bg-dark"
+          />
           <span>Movie Database App</span>
           <img src={require("../img/movie-ui.png")} alt="logo" />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href="https://developers.themoviedb.org/3/search/search-movies">The Movie Database API</NavLink>
+                <NavLink href="https://developers.themoviedb.org/3/search/search-movies">
+                  The Movie Database API
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/lindgrenarto/movie-ui"> App in GitHub</NavLink>
+                <NavLink href="https://github.com/lindgrenarto/movie-ui">
+                  {" "}
+                  App in GitHub
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
       </div>
-    
-    
     );
   }
 }
