@@ -1,4 +1,5 @@
 import React from "react";
+import {Button} from 'react-bootstrap'
 
 
 class MovieRow extends React.Component {
@@ -47,7 +48,7 @@ class MovieRow extends React.Component {
                     className="button"
                   >
                     View
-                  </button>
+                  </button >
 
                   <b
                     style={{
@@ -59,14 +60,7 @@ class MovieRow extends React.Component {
                     {this.props.movie.vote_average}/10
                   </b>
 
-                  <p>
-                    <div>
-
                   
-
-
-                    </div>
-                  </p>
                 </div>
               </div>
             </div>
