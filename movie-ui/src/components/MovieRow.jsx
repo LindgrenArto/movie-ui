@@ -37,7 +37,7 @@ class MovieRow extends React.Component {
         <div className="col-sm-4" style={{ float: "left" }}>
           <div
             className="card mb-4 shadow-sm"
-            style={{ height: 1400, width: 350, padding: 10 }}
+            style={{ height: 900, width: 350, padding: 10 }}
 
           >
         
