@@ -9,6 +9,9 @@ class MovieList extends Component {
     };
     this.performSearch = this.performSearch.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    
+  }
+  componentDidMount() {
     this.performSearch("A");
   }
 //api key:  1b5adf76a72a13bad99b8fc0c68cb085

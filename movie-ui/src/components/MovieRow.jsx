@@ -13,6 +13,23 @@ class MovieRow extends React.Component {
     const url = "https://www.themoviedb.org/movie/" + this.props.movie.id;
     window.location.href = url;
   }
+  fixSubstring = () => {
+    if (this.props.movie.overview) {
+      return <div>{this.props.movie.overview.substring(0, 300)}</div>;
+    } else {
+      return <div>No info for this article...</div>;
+    }
+  };
+
+  fixPoster = () => {
+    if (this.props.movie.poster_path) {
+      return (
+        <img alt="poster" width="100%" src={this.props.movie.poster_src} />
+      );
+    } else {
+      return <div>No poster for this article...</div>;
+    }
+  };
 
   render() {
     return (
@@ -24,13 +41,19 @@ class MovieRow extends React.Component {
 
           >
         
-            <img alt="poster"  width="100%" src={this.props.movie.poster_src} />
-            <h3><center>{this.props.movie.title}</center></h3>
-            <h3><center>{this.props.movie.original_name}</center></h3>
+        <div>{this.fixPoster()}</div>
+            <h3>
+              <center>{this.props.movie.title}</center>
+            </h3>
+
+            <h3>
+              <center>{this.props.movie.name}</center>
+            </h3>
             <div className="card-body">
-              <p style={{ fontSize: 20 }} className="card-text">
-                {this.props.movie.overview}...
-              </p>
+              <div style={{ fontSize: 15 }} classname="card-text">
+                {this.fixSubstring()}
+              </div>
+
               <div className="d-flex justify-content-between align-items-center">
                 <div
                   className="btn-group"
