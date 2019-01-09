@@ -11,10 +11,10 @@ class MovieList extends Component {
     this.handleSearch = this.handleSearch.bind(this);
     this.performSearch("A");
   }
-
+//api key:  1b5adf76a72a13bad99b8fc0c68cb085
   performSearch(searchTerm) {
     const urlString =
-      "https://api.themoviedb.org/3/search/movie?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=" +
+      "https://api.themoviedb.org/3/search/multi?api_key=1b5adf76a72a13bad99b8fc0c68cb085&language=en-US&query="  +
       searchTerm;
     $.ajax({
       url: urlString,
@@ -52,7 +52,7 @@ class MovieList extends Component {
         <input
           value={this.state.filter}
           type="text"
-          placeholder="Search"
+          placeholder="Search for movies and tv-series.."
           className="movie-input"
           onChange={this.handleSearch}
         />
