@@ -31,6 +31,22 @@ class MovieRow extends React.Component {
     }
   };
 
+  showReview = () => {
+    if (this.props.movie.vote_average) {
+      return (
+      <b
+        style={{
+          marginLeft: 100,
+          fontSize: 25,
+          marginTop: 10
+        }}
+      >
+        {this.props.movie.vote_average}/10
+      </b> 
+      );
+    } 
+  }
+
   render() {
     return (
       <div className="container">
@@ -74,16 +90,9 @@ class MovieRow extends React.Component {
                     View
                   </button >
 
-                  <b
-                    style={{
-                      marginLeft: 100,
-                      fontSize: 25,
-                      marginTop: 10
-                    }}
-                  >
-                    {this.props.movie.vote_average}/10
-                  </b>
+                  { this.showReview() }
 
+                   { console.log(this.props.movie) }
                   
                 </div>
               </div>
