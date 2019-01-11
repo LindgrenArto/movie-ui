@@ -9,15 +9,14 @@ class MovieList extends Component {
     };
     this.performSearch = this.performSearch.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
-    
   }
   componentDidMount() {
     this.performSearch("A");
   }
-//api key:  1b5adf76a72a13bad99b8fc0c68cb085
+  //api key:  1b5adf76a72a13bad99b8fc0c68cb085
   performSearch(searchTerm) {
     const urlString =
-      "https://api.themoviedb.org/3/search/multi?api_key=1b5adf76a72a13bad99b8fc0c68cb085&language=en-US&query="  +
+      "https://api.themoviedb.org/3/search/multi?api_key=1b5adf76a72a13bad99b8fc0c68cb085&language=en-US&query=" +
       searchTerm;
     $.ajax({
       url: urlString,

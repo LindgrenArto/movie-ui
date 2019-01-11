@@ -1,6 +1,4 @@
 import React from "react";
-import {Button} from 'react-bootstrap'
-
 
 class MovieRow extends React.Component {
   constructor(props) {
@@ -38,10 +36,8 @@ class MovieRow extends React.Component {
           <div
             className="card mb-4 shadow-sm"
             style={{ height: 900, width: 350, padding: 10 }}
-
           >
-        
-        <div>{this.fixPoster()}</div>
+            <div>{this.fixPoster()}</div>
             <h3>
               <center>{this.props.movie.title}</center>
             </h3>
@@ -63,8 +59,6 @@ class MovieRow extends React.Component {
                     verticalAlign: "middle"
                   }}
                 >
-
-                
                   <button
                     type="button"
                     onClick={this.viewMovie}
@@ -72,7 +66,7 @@ class MovieRow extends React.Component {
                     className="button"
                   >
                     View
-                  </button >
+                  </button>
 
                   <b
                     style={{
@@ -83,8 +77,6 @@ class MovieRow extends React.Component {
                   >
                     {this.props.movie.vote_average}/10
                   </b>
-
-                  
                 </div>
               </div>
             </div>

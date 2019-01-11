@@ -4,14 +4,9 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from "reactstrap";
 
 class NavBar extends Component {
@@ -36,8 +31,8 @@ class NavBar extends Component {
             className="navbar navbar-dark bg-dark"
           />
           <div>
-          <img src={require("../img/movie-ui.png")} alt="logo" />
-          <span>Movie Database</span>
+            <img src={require("../img/movie-ui.png")} alt="logo" />
+            <span>Movie Database</span>
           </div>
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
@@ -54,9 +49,7 @@ class NavBar extends Component {
               </NavItem>
 
               <NavItem>
-                <NavLink href="/info">
-                  About the App
-                </NavLink>
+                <NavLink href="/info">About the App</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
