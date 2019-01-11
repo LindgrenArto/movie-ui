@@ -10,9 +10,15 @@ class MovieRow extends React.Component {
   }
 
   viewMovie() {
-    const url = "https://www.themoviedb.org/movie/" + this.props.movie.id;
+    const url = "https://www.themoviedb.org/"+ this.props.movie.media_type + "/" + this.props.movie.id;
     window.location.href = url;
+    console.log(this.props.movie.media_type)
   }
+
+
+
+  
+
   fixSubstring = () => {
     if (this.props.movie.overview) {
       return <div>{this.props.movie.overview.substring(0, 300)}</div>;
@@ -50,7 +56,7 @@ class MovieRow extends React.Component {
               <center>{this.props.movie.name}</center>
             </h3>
             <div className="card-body">
-              <div style={{ fontSize: 15 }} classname="card-text">
+              <div style={{ fontSize: 15 }} className="card-text">
                 {this.fixSubstring()}
               </div>
 
