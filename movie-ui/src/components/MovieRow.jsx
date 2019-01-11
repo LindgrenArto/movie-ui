@@ -8,9 +8,15 @@ class MovieRow extends React.Component {
   }
 
   viewMovie() {
-    const url = "https://www.themoviedb.org/movie/" + this.props.movie.id;
+    const url = "https://www.themoviedb.org/"+ this.props.movie.media_type + "/" + this.props.movie.id;
     window.location.href = url;
+    console.log(this.props.movie.media_type)
   }
+
+
+
+  
+
   fixSubstring = () => {
     if (this.props.movie.overview) {
       return <div>{this.props.movie.overview.substring(0, 300)}</div>;
@@ -46,7 +52,7 @@ class MovieRow extends React.Component {
               <center>{this.props.movie.name}</center>
             </h3>
             <div className="card-body">
-              <div style={{ fontSize: 15 }} classname="card-text">
+              <div style={{ fontSize: 15 }} className="card-text">
                 {this.fixSubstring()}
               </div>
 
@@ -86,32 +92,5 @@ class MovieRow extends React.Component {
     );
   }
 }
-/*</div>
-      <table key={this.props.movie.id} className="table">
-        <tbody>
-          <tr>
-            <td>
-              <img alt="poster" width="150" src={this.props.movie.poster_src} />
-            </td>
-            <td>
-              <h3>{this.props.movie.title}</h3>
-              <p>{this.props.movie.overview}</p>
-              <b>
-                <p> {this.props.movie.vote_average}/10</p>
-              </b>
-              <input
-                type="button"
-                onClick={this.viewMovie.bind(this)}
-                value="View"
-                className="button"
-              />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    );
-  }
-}
-*/
 
 export default MovieRow;
