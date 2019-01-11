@@ -26,9 +26,8 @@ class App extends Component {
                 </React.Fragment>
               </div>
             )}
-            exact
           />
-</Switch>
+        </Switch>
       </BrowserRouter>
     );
   }
