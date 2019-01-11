@@ -1,6 +1,5 @@
 import React from "react";
 
-
 class MovieRow extends React.Component {
   constructor(props) {
     super(props);
@@ -48,12 +47,9 @@ class MovieRow extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="col-sm-4" style={{ float: "left" }}>
-          <div
-            className="card mb-4 shadow-sm"
-            style={{ height: 900, width: 350, padding: 10 }}
-          >
+      <div className="container" style={{ alignContent: "center" }}>
+        <div className="col-xs-4" style={{ float: "left" }}>
+          <div className="card mb-4 shadow-sm">
             <div>{this.fixPoster()}</div>
             <h3>
               <center>{this.props.movie.title}</center>
@@ -85,15 +81,7 @@ class MovieRow extends React.Component {
                     View
                   </button>
 
-                  <b
-                    style={{
-                      marginLeft: 100,
-                      fontSize: 25,
-                      marginTop: 10
-                    }}
-                  >
-                    {this.props.movie.vote_average}/10
-                  </b>
+                  <b className="b-style">{this.props.movie.vote_average}/10</b>
                 </div>
               </div>
             </div>
