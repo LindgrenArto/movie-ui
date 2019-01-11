@@ -52,6 +52,12 @@ class NavBar extends Component {
                   App in GitHub
                 </NavLink>
               </NavItem>
+
+              <NavItem>
+                <NavLink href="/info">
+                  About the App
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
