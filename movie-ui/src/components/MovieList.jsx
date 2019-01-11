@@ -24,7 +24,7 @@ class MovieList extends Component {
       success: searchResults => {
         const results = searchResults.results;
 
-        var movieRows = [];
+        let movieRows = [];
 
         results.forEach(movie => {
           movie.poster_src =
