@@ -1,5 +1,6 @@
 import React from "react";
 
+
 class MovieRow extends React.Component {
   constructor(props) {
     super(props);
@@ -8,14 +9,14 @@ class MovieRow extends React.Component {
   }
 
   viewMovie() {
-    const url = "https://www.themoviedb.org/"+ this.props.movie.media_type + "/" + this.props.movie.id;
+    const url =
+      "https://www.themoviedb.org/" +
+      this.props.movie.media_type +
+      "/" +
+      this.props.movie.id;
     window.location.href = url;
-    console.log(this.props.movie.media_type)
+    console.log(this.props.movie.media_type);
   }
-
-
-
-  
 
   fixSubstring = () => {
     if (this.props.movie.overview) {
@@ -30,8 +31,18 @@ class MovieRow extends React.Component {
       return (
         <img alt="poster" width="100%" src={this.props.movie.poster_src} />
       );
+    }
+
+    if (this.props.movie.profile_path) {
+      const path =
+        "https://image.tmdb.org/t/p/w500" + this.props.movie.profile_path;
+      return (
+        <div>
+          <img alt="poster" width="100%" src={path} />
+        </div>
+      );
     } else {
-      return <div>No poster for this article...</div>;
+      return <div>no poster found..</div>;
     }
   };
 
