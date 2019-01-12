@@ -12,13 +12,12 @@ class InfoComponent extends React.Component {
           </div>
         </div>
         <div className="container">
-          <div className="col-sm-8 mx-auto">
+          <div className="card-style">
             <div
-              className="card mb-4 shadow-sm"
-              style={{ height: 600, width: 600, padding: 10 }}
+              className="card-info mb-4 shadow-sm"
             >
-              <h1 style={{ marginTop: 30 }}>Movie Database Info</h1>
-              <p style={{ marginTop: 100, padding: 20, textAlign:"center" }}>
+              <h1 className="header">Movie Database Info</h1>
+              <p className="paragraph">
                 <b>
                   This app was built in CodeCamp hosted by LUT University in
                   1/2019. The developers are Antti Karjalainen, Pekka Makkonen,
@@ -28,7 +27,6 @@ class InfoComponent extends React.Component {
               <div className="button-style">
                 <a
                   href="http://localhost:3000"
-                  className="info-button"
                   type="button"
                   className="btn btn-primary"
                 >
