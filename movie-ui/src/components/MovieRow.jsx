@@ -21,7 +21,7 @@ class MovieRow extends React.Component {
     if (this.props.movie.overview) {
       return <div>{this.props.movie.overview.substring(0, 300)}</div>;
     } else {
-      return <div>No info for this article...</div>;
+      return <div>No information found...</div>;
     }
   };
 
@@ -41,7 +41,13 @@ class MovieRow extends React.Component {
         </div>
       );
     } else {
-      return <div>no poster found..</div>;
+      return <div>No poster found..</div>;
+    }
+  };
+
+  showReview = () => {
+    if (this.props.movie.vote_average) {
+      return <b className="b-style">{this.props.movie.vote_average}/10</b>;
     }
   };
 
@@ -81,7 +87,7 @@ class MovieRow extends React.Component {
                     View
                   </button>
 
-                  <b className="b-style">{this.props.movie.vote_average}/10</b>
+                  {this.showReview()}
                 </div>
               </div>
             </div>
