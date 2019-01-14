@@ -54,7 +54,7 @@ class MovieList extends Component {
         <input
           value={this.state.filter}
           type="text"
-          placeholder="Search for movies and tv-series.."
+          placeholder="Find movies, tv-series or actors.."
           className="movie-input"
           onChange={this.handleSearch}
         />
