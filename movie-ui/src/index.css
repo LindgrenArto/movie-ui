@@ -97,10 +97,93 @@ b {
   margin-left: 230px;
   margin-top: 130px;
 }
+h1 {
+  text-align: center;
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 25px;
+}
 
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: white;
+  height: 10px;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: red;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #343a40;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+  text-decoration: none;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+#slide .bm-menu,
+#stack .bm-menu,
+#reveal .bm-menu {
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+#repo,
+#about,
+#api {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
 .header {
   margin-top: 30px;
-  text-align: center
+  text-align: center;
 }
 
 .b-style {
@@ -156,7 +239,7 @@ b {
     font-weight: bold;
     font-size: 24px;
     margin-top: 10px;
-    text-align: center
+    text-align: center;
   }
 
   .paragraph {
@@ -214,7 +297,7 @@ b {
     font-weight: bold;
     font-size: 24px;
     margin-top: 10px;
-    text-align: center
+    text-align: center;
   }
 
   .paragraph {

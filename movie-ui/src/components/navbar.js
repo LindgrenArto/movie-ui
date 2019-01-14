@@ -1,13 +1,6 @@
 import React, { Component } from "react";
 
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  NavLink
-} from "reactstrap";
+import { Navbar } from "reactstrap";
 
 class NavBar extends Component {
   constructor(props) {
@@ -26,33 +19,10 @@ class NavBar extends Component {
     return (
       <div>
         <Navbar className="navbar navbar-dark bg-dark">
-          <NavbarToggler
-            onClick={this.toggleNavbar}
-            className="navbar navbar-dark bg-dark"
-          />
           <div>
             <img src={require("../img/movie-ui.png")} alt="logo" />
             <span>Movie Database</span>
           </div>
-          <Collapse isOpen={!this.state.collapsed} navbar>
-            <Nav navbar>
-              <NavItem>
-                <NavLink href="https://developers.themoviedb.org/3/search/search-movies">
-                  The Movie Database API
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/lindgrenarto/movie-ui">
-                  {" "}
-                  App in GitHub
-                </NavLink>
-              </NavItem>
-
-              <NavItem>
-                <NavLink href="/info">About the App</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
         </Navbar>
       </div>
     );

@@ -5,7 +5,7 @@ import MovieList from "./components/MovieList";
 import Index from "./components/ScrollToTop";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import InfoComponent from "./components/InfoComponent";
-import MovieRow from "./components/MovieRow";
+import SideBar from "./components/SideBar";
 
 class App extends Component {
   render() {
@@ -18,6 +18,7 @@ class App extends Component {
             render={props => (
               <div>
                 <React.Fragment>
+                  <SideBar />
                   <NavBar />
                   <main className="container">
                     <MovieList />
